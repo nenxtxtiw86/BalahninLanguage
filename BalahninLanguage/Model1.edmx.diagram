@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="96a3b39034f041b786c562bc3e7f7f60" Name="Diagram1">
+        <EntityTypeShape EntityType="BalahninLanguageModel.Client" Width="1.5" PointX="3" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="BalahninLanguageModel.ClientService" Width="1.5" PointX="5.25" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BalahninLanguageModel.DocumentByService" Width="1.5" PointX="7.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BalahninLanguageModel.Gender" Width="1.5" PointX="0.75" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BalahninLanguageModel.Manufacturer" Width="1.5" PointX="0.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BalahninLanguageModel.Product" Width="1.5" PointX="3" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BalahninLanguageModel.ProductPhoto" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="BalahninLanguageModel.ProductSale" Width="1.5" PointX="5.25" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BalahninLanguageModel.Service" Width="1.5" PointX="3" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BalahninLanguageModel.ServicePhoto" Width="1.5" PointX="5.25" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BalahninLanguageModel.Tag" Width="1.5" PointX="7.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BalahninLanguageModel.TagOfClient" Width="1.5" PointX="10" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="BalahninLanguageModel.FK_Client_Gender" ManuallyRouted="false" />
+        <AssociationConnector Association="BalahninLanguageModel.FK_Client_Gender1" ManuallyRouted="false" />
+        <AssociationConnector Association="BalahninLanguageModel.FK_ClientService_Client" ManuallyRouted="false" />
+        <AssociationConnector Association="BalahninLanguageModel.FK_ClientService_Service" ManuallyRouted="false" />
+        <AssociationConnector Association="BalahninLanguageModel.FK_Product_Manufacturer" ManuallyRouted="false" />
+        <AssociationConnector Association="BalahninLanguageModel.FK_ProductPhoto_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="BalahninLanguageModel.FK_ProductSale_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="BalahninLanguageModel.FK_ServicePhoto_Service" ManuallyRouted="false" />
+        <AssociationConnector Association="BalahninLanguageModel.FK_TagOfClient_Tag" ManuallyRouted="false" />
+        <AssociationConnector Association="BalahninLanguageModel.AttachedProduct" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
