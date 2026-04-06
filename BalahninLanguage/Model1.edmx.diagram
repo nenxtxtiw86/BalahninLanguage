@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="96a3b39034f041b786c562bc3e7f7f60" Name="Diagram1">
+      <Diagram DiagramId="90cecbfb649e465383aac8987516c7a7" Name="Diagram1">
         <EntityTypeShape EntityType="BalahninLanguageModel.Client" Width="1.5" PointX="3" PointY="7" IsExpanded="true" />
         <EntityTypeShape EntityType="BalahninLanguageModel.ClientService" Width="1.5" PointX="5.25" PointY="7.625" IsExpanded="true" />
         <EntityTypeShape EntityType="BalahninLanguageModel.DocumentByService" Width="1.5" PointX="7.75" PointY="3.75" IsExpanded="true" />

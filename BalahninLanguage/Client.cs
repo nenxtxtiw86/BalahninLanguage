@@ -11,7 +11,8 @@ namespace BalahninLanguage
 {
     using System;
     using System.Collections.Generic;
-    using System.IO.Pipes;
+    using System.IO;
+    using System.Linq;
 
     public partial class Client
     {
@@ -22,8 +23,8 @@ namespace BalahninLanguage
         }
     
         public int ID { get; set; }
-        public string FirstName { get; set; }
         public string LastName { get; set; }
+        public string FirstName { get; set; }
         public string Patronymic { get; set; }
         public string GenderCode { get; set; }
         public string Phone { get; set; }
@@ -31,12 +32,58 @@ namespace BalahninLanguage
         public Nullable<System.DateTime> Birthday { get; set; }
         public string Email { get; set; }
         public System.DateTime RegistrationDate { get; set; }
-        public string RegistrationDateString
-        { get { return RegistrationDate.ToShortDateString(); } }
-
+    
         public virtual Gender Gender { get; set; }
         public virtual Gender Gender1 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ClientService> ClientService { get; set; }
+        public int VisitCount
+        {
+            get
+            {
+                return ClientService.Count;
+            }
+        }
+
+        public DateTime? LastVisitDate
+        {
+            get
+            {
+                if (ClientService == null || ClientService.Count == 0)
+                    return null;
+
+                return ClientService.Max(p => p.StartTime);
+            }
+        }
+
+        public string LastVisit
+        {
+            get
+            {
+                if (ClientService == null || ClientService.Count == 0)
+                {
+                    return "нет";
+                }
+
+                var maxStartTime = ClientService.Max(p => p.StartTime);
+                return maxStartTime.ToString("dd.MM.yyyy");
+            }
+        }
+
+        public string ClientPhotoPath
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(PhotoPath))
+                    return null;
+
+                // Если PhotoPath уже содержит полный путь, используем его
+                string fullPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, PhotoPath);
+
+                // Если файл существует – возвращаем путь, иначе null
+                return File.Exists(fullPath) ? fullPath : null;
+            }
+        }
+
     }
 }

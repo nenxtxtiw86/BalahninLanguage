@@ -11,5 +11,10 @@ namespace BalahninLanguage
     {
         public static Frame MainFrame { get; set; }
 
+
+
+
+
+
     }
 }

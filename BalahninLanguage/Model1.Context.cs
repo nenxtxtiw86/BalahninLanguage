@@ -20,7 +20,7 @@ namespace BalahninLanguage
         {
             if (_context == null)
                 _context = new BalahninLanguageEntities();
-                return _context;
+            return _context;
         }
 
         public BalahninLanguageEntities()

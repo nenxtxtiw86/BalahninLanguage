@@ -5,16 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BalahninLanguage"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="1000" Background='#FFE6FABF' FontFamily="Comic Sans MS">
+        Title="MainWindow" Height="700" Width="1200"  FontFamily="Comic Sans MS">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="197*"/>
+            <ColumnDefinition Width="403*"/>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="85"></RowDefinition>
             <RowDefinition Height="*"/>
             <RowDefinition Height="30"></RowDefinition>
         </Grid.RowDefinitions>
+        <Rectangle Grid.Row="0" Grid.ColumnSpan="2" Fill="#FFE6FABF"/>
+
         <Frame Name="MainFrame" Grid.ColumnSpan="2" Grid.RowSpan="2" ContentRendered="MainFrame_ContentRendered" NavigationUIVisibility="Hidden"/>
-        <TextBlock Name="LAUNGE" Text="Лангуаге" Grid.Row="0" HorizontalAlignment="Center" Margin="0,20,0,19" FontSize="20" ></TextBlock>
+        <TextBlock Name="LAUNGE" Text="Лангуаге" Grid.Row="0" HorizontalAlignment="Left" Margin="163,20,0,19" FontSize="20" Grid.Column="1" ></TextBlock>
         <Image Source="/res/school_logo.ico"  HorizontalAlignment="Left" Grid.Row="0"/>
-        <Button Name="BtnBack" Content="Назад" Height="50" Width="100" HorizontalAlignment="Right"  Click="BtnBackClick" Visibility="Hidden" ></Button>
+        <Button Name="BtnBack" Content="Назад" Height="50" Width="100" HorizontalAlignment="Right"  Click="BtnBackClick" Visibility="Hidden" Grid.Column="1" Margin="10" Background="#FF03A0FA"></Button>
     </Grid>
 </Window>
